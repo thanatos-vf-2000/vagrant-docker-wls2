@@ -1,0 +1,18 @@
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
+
+Vagrant.configure("2") do |config|
+  config.vm.define "jammy"
+  config.vm.hostname = "jammy"
+  config.vm.hostname = "jammy"
+  config.vm.provider "docker" do |docker|
+    docker.name = "ubuntu-jammy"
+    docker.build_dir = "./"
+    docker.remains_running = true
+    docker.has_ssh = true
+    docker.privileged = true
+    docker.create_args     = ['--tmpfs', '/tmp', '--tmpfs', '/run', '--tmpfs', '/run/lock', '-v', '/sys/fs/cgroup:/sys/fs/cgroup:ro', '-t']
+    # docker.run_args     = ['--tmpfs', '/tmp', '--tmpfs', '/run', '--tmpfs', '/run/lock', '-v', '/sys/fs/cgroup:/sys/fs/cgroup:ro', '-t']
+  end
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+end
+

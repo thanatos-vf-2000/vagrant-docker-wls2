@@ -1,0 +1,5 @@
+/.vagrant
+/ubuntu/bionic/.vagrant
+/ubuntu/focal/.vagrant
+/ubuntu/jammy/.vagrant
+/ubuntu/xenial/.vagrant
