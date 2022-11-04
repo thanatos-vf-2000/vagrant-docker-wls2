@@ -1,0 +1,20 @@
+{
+    "name": "thanatos-vf-2000/vagrant-docker-wls2",
+    "description": "Exemple of Vagrant and Docker in WSL2.",
+    "keywords": ["vagrant", "docker", "wsl2", "ubuntu"],
+    "homepage": "https://github.com/thanatos-vf-2000/vagrant-docker-wls2",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Franck VANHOUCKE",
+            "email": "contact@ginkgos.net",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "docker": ">=20.10.18",
+        "vagrant": ">=2.2.19"
+    }
+}
